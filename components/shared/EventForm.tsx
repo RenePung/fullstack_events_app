@@ -60,7 +60,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
 
       uploadedImageUrl = uploadedImages[0].url
     }
-
+//--------------------------------------------------------------------------------------
     if(type === 'Create') {
       try {
         const newEvent = await createEvent({
@@ -74,10 +74,10 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
           router.push(`/events/${newEvent._id}`)
         }
       } catch (error) {
-        console.log(error);
+        console.log(error)
       }
     }
-
+//---------------------------------------------------------------------------------
     if(type === 'Update') {
       if(!eventId) {
         router.back()
